@@ -1,8 +1,10 @@
 const express = require('express');
+const router = express.Router();
+const dronesController = require('../controllers/drones.controller');
 
 // require the Drone model here
 
-const router = express.Router();
+router.get('/', dronesController.index);
 
 
 router.get('/drones', (req, res, next) => {
